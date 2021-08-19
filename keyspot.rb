@@ -11,6 +11,6 @@ class Keyspot < Formula
   # depends_on "cmake" => :build
 
   def install
-    bin.install keyspot
+    bin.install 'keyspot'
   end
 end
