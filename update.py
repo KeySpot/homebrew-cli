@@ -35,6 +35,8 @@ formulaFile = open("keyspot.rb", 'w')
 formulaFile.write(formula)
 formulaFile.close()
 
+
+print("rm -rf {}".format(formulaFile))
 os.system("rm -rf {}".format(formulaFile))
 
 os.system("git add .")
