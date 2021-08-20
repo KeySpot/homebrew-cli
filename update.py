@@ -36,8 +36,8 @@ formulaFile.write(formula)
 formulaFile.close()
 
 
-print("rm -rf {}".format(formulaFile))
-os.system("rm -rf {}".format(formulaFile))
+print("rm -rf {}".format(formulaPath))
+os.system("rm -rf {}".format(formulaPath))
 
 os.system("git add .")
 os.system('git commit -m "v{}"'.format(version))
