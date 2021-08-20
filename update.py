@@ -21,15 +21,15 @@ formulaFile.close()
 formula = """class Keyspot < Formula
   desc "KeySpot CLI tool for accessing records and injecting variables into an environment without needing .env files"
   homepage "https://keyspot.app"
-  url "{}"
-  sha256 "db4a181befa34333f21338ff45db85a1f969585572f9d018ec5c57a35fe6bb62"
+  url "{0}"
+  sha256 "{1}"
   license "MIT"
 
   def install
     bin.install 'keyspot'
   end
 end
-""".format(binaryUrl)
+""".format(binaryUrl, checksum)
 
 formulaFile = open("keyspot.rb", 'w')
 formulaFile.write(formula)
