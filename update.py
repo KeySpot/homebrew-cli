@@ -22,7 +22,7 @@ formula = """class Keyspot < Formula
   desc "KeySpot CLI tool for accessing records and injecting variables into an environment without needing .env files"
   homepage "https://keyspot.app"
   url "{0}"
-  sha256 "{1}"
+  sha256 {1}
   license "MIT"
 
   def install
