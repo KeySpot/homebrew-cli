@@ -35,10 +35,4 @@ formulaFile = open("keyspot.rb", 'w')
 formulaFile.write(formula)
 formulaFile.close()
 
-
-print("rm -rf {}".format(formulaPath))
 os.system("rm -rf {}".format(formulaPath))
-
-os.system("git add .")
-os.system('git commit -m "v{}"'.format(version))
-os.system('git push origin main')
