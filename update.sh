@@ -19,7 +19,7 @@ binaryUrl="https://github.com/KeySpot/keyspot/releases/download/$version/keyspot
 
 curl $binaryUrl --output binary.tar.gz
 
-checksum=$(shasum -a 256 binary.tar.gz)
+checksum=$(openssl sha256 < binary.tar.gz)
 
 echo $checksum
 
