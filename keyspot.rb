@@ -6,7 +6,7 @@ class Keyspot < Formula
 	license "MIT"
 
 	def install
-		bin.install 'cli-tool'
+		bin.install 'cli-tool' => 'keyspot'
 	end
 end
 
