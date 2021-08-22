@@ -19,7 +19,7 @@ binaryUrl="https://github.com/KeySpot/cli-tool/releases/download/$version/cli-to
 
 curl $binaryUrl --output binary.tar.gz
 
-checksum=$(curl -Ls $binaryUrl | shasum -a 256)
+checksum=$(curl -Ls $binaryUrl | shasum -a 256 | awk '{print $1;}')
 
 echo $checksum
 
