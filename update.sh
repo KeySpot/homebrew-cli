@@ -23,7 +23,7 @@ checksum=$(openssl sha256 < binary.tar.gz)
 
 echo $checksum
 
-formula="class Keyspot < Formula\n\tdesc \"KeySpot CLI tool for accessing records and injecting variables into an environment without needing .env files\"\n\thomepage \"https://keyspot.app\"\n\turl \"${binaryUrl}\"\n\tsha256 "${checksum}"\n\tlicense \"MIT\"\n\n\tdef install\n\t\tbin.install 'keyspot'\n\tend\nend\n"
+formula="class Keyspot < Formula\n\tdesc \"KeySpot CLI tool for accessing records and injecting variables into an environment without needing .env files\"\n\thomepage \"https://keyspot.app\"\n\turl \"${binaryUrl}\"\n\tsha256 \"${checksum}\"\n\tlicense \"MIT\"\n\n\tdef install\n\t\tbin.install 'keyspot'\n\tend\nend\n"
 
 echo -e $formula > "keyspot.rb"
 
