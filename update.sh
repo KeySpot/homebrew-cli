@@ -15,7 +15,7 @@ version=$(git describe --tags --abbrev=0)
 cd ../
 rm -rf $repoDir
 
-binaryUrl="https://github.com/KeySpot/keyspot/releases/download/$version/keyspot_${version:1}_Darwin_x86_64.tar.gz"
+binaryUrl="https://github.com/KeySpot/cli-tool/releases/download/$version/keyspot_${version:1}_Darwin_x86_64.tar.gz"
 
 curl $binaryUrl --output binary.tar.gz
 
