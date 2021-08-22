@@ -19,15 +19,13 @@ binaryUrl="https://github.com/KeySpot/cli-tool/releases/download/$version/cli-to
 
 curl $binaryUrl --output binary.tar.gz
 
-checksum=$(openssl sha256 < binary.tar.gz)
+checksum=$(curl -Ls $binaryUrl | shasum -a 256)
 
 echo $checksum
 
 formula="class Keyspot < Formula\n\tdesc \"KeySpot CLI tool for accessing records and injecting variables into an environment without needing .env files\"\n\thomepage \"https://keyspot.app\"\n\turl \"${binaryUrl}\"\n\tsha256 \"${checksum}\"\n\tlicense \"MIT\"\n\n\tdef install\n\t\tbin.install 'keyspot'\n\tend\nend\n"
 
 echo -e $formula > "keyspot.rb"
-
-rm -rf binary.tar.gz
 
 git add .
 git commit -m "$version"
