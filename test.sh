@@ -1,2 +1,0 @@
-version=
-echo $version
