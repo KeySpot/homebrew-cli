@@ -1,19 +1,6 @@
 #!/bin/bash
 
-email="carlschader@gmail.com"
-repoUrl="https://github.com/keyspot/cli-tool.git"
-repoDir="cli-tool/"
-packageName="keyspot"
-maintainer="Carl Schader"
-descriptionShort="Application secrets manager."
-descriptionLong="The keyspot CLI tool offers an interface for accessing the KeySpot(https://keyspot.app) web app through the terminal. One of the primary functions of the keyspot CLI tool is the injection of application secrets into a program or command as environment variables."
-
-git clone $repoUrl
-cd $repoDir
-git fetch --all --tags
-version=$(git describe --tags --abbrev=0)
-cd ../
-rm -rf $repoDir
+version=$(git ls-remote --tags https://github.com/keyspot/cli-tool.git | tail -n 1 | sed 's/.*refs\/tags\///g')
 
 binaryUrl="https://github.com/KeySpot/cli-tool/releases/download/$version/cli-tool_${version:1}_Darwin_x86_64.tar.gz"
 
