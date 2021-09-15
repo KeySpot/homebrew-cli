@@ -12,4 +12,5 @@ echo -e $formula > "keyspot.rb"
 
 git add .
 git commit -m "$version"
+git tag $version
 git push origin main
