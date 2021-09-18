@@ -1,8 +1,8 @@
 class Keyspot < Formula
 	desc "Tool for managing environment variables"
 	homepage "https://keyspot.app"
-	url "https://github.com/KeySpot/cli-tool/releases/download/v1.2.1/cli-tool_1.2.1_Darwin_x86_64.tar.gz"
-	sha256 "1423ecf895677c75275c113b4f2d88e8ce71c18613bb2e2cd964c1048ca0bf15"
+	url "https://github.com/KeySpot/cli-tool/releases/download/v1.3.0/cli-tool_1.3.0_Darwin_x86_64.tar.gz"
+	sha256 "306985c4771545423684b8cfa893984666e6f9ebf2ea8e7e3a694c4a1647f04b"
 	license "MIT"
 
 	def install
